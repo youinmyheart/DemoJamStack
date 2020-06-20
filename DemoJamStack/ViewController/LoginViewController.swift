@@ -29,10 +29,13 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
         registerKeyboardNoti()
+        textFieldPassword.text = ""
     }
 
     @IBAction func tapOnBtnSignUp(_ sender: Any) {
         AppUtils.log("tapOnBtnSignUp")
+        view.endEditing(true)
+        goToRegistrationVC()
     }
     
     @IBAction func tapOnBtnLogin(_ sender: Any) {
@@ -58,8 +61,6 @@ class LoginViewController: UIViewController {
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(tapGesture)
-        
-        loginVM.email = ""
     }
     
     @objc func hideKeyboard() {
@@ -125,6 +126,11 @@ class LoginViewController: UIViewController {
     
     private func goToProfileVC() {
         let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func goToRegistrationVC() {
+        let vc = RegistrationViewController(nibName: "RegistrationViewController", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
