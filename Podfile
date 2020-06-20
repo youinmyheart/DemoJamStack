@@ -5,7 +5,10 @@ target 'DemoJamStack' do
   #use_frameworks!
 
   # Pods for DemoJamStack
-  pod 'SideMenu'
+  #pod 'SideMenu'
+  pod 'SideMenuSwift'
+  pod 'Alamofire', '~> 4.0'
+  pod 'NVActivityIndicatorView'
 
   target 'DemoJamStackTests' do
     inherit! :search_paths

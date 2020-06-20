@@ -1,16 +1,26 @@
 PODS:
-  - SideMenu (6.4.8)
+  - Alamofire (4.9.1)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - SideMenuSwift (2.0.5)
 
 DEPENDENCIES:
-  - SideMenu
+  - Alamofire (~> 4.0)
+  - NVActivityIndicatorView
+  - SideMenuSwift
 
 SPEC REPOS:
   trunk:
-    - SideMenu
+    - Alamofire
+    - NVActivityIndicatorView
+    - SideMenuSwift
 
 SPEC CHECKSUMS:
-  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
 
-PODFILE CHECKSUM: a198f6c0271283031cd886a673170193bdf077b5
+PODFILE CHECKSUM: dee3fa8bde7753d1a551ff4a95f29c4c458a78ad
 
 COCOAPODS: 1.9.3

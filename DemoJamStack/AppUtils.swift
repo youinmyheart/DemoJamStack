@@ -5,6 +5,7 @@
 // 
 
 import UIKit
+import NVActivityIndicatorView
 
 class AppUtils: NSObject {
 
@@ -79,5 +80,18 @@ class AppUtils: NSObject {
         let okBtn = UIAlertAction.init(title: buttonStr, style: .default, handler: handler)
         alert.addAction(okBtn)
         viewController.present(alert, animated: true)
+    }
+    
+    public static func startAnimating() {
+        let activityData = ActivityData()
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
+    }
+    
+    public static func stopAnimating() {
+        NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+    }
+    
+    public static func isAnimating() -> Bool {
+        NVActivityIndicatorPresenter.sharedInstance.isAnimating
     }
 }
