@@ -15,6 +15,12 @@
 		31516371249E578800AF9AB2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31516370249E578800AF9AB2 /* LoginViewModel.swift */; };
 		31516374249E74E900AF9AB2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31516372249E74E800AF9AB2 /* ProfileViewController.swift */; };
 		31516375249E74E900AF9AB2 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31516373249E74E800AF9AB2 /* ProfileViewController.xib */; };
+		31516378249F099F00AF9AB2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31516376249F099E00AF9AB2 /* MenuViewController.swift */; };
+		31516379249F099F00AF9AB2 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31516377249F099E00AF9AB2 /* MenuViewController.xib */; };
+		3151637B249F410800AF9AB2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3151637A249F410800AF9AB2 /* ProfileViewModel.swift */; };
+		3151637D249F94A100AF9AB2 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3151637C249F94A100AF9AB2 /* MenuViewModel.swift */; };
+		31516381249F996100AF9AB2 /* ProfileHeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3151637F249F996100AF9AB2 /* ProfileHeaderTableCell.swift */; };
+		31516382249F996100AF9AB2 /* ProfileHeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31516380249F996100AF9AB2 /* ProfileHeaderTableCell.xib */; };
 		317A15BC249D25C3003F4CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A15BB249D25C3003F4CDA /* AppDelegate.swift */; };
 		317A15BE249D25C3003F4CDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A15BD249D25C3003F4CDA /* SceneDelegate.swift */; };
 		317A15C0249D25C3003F4CDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A15BF249D25C3003F4CDA /* LoginViewController.swift */; };
@@ -57,6 +63,12 @@
 		31516370249E578800AF9AB2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		31516372249E74E800AF9AB2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		31516373249E74E800AF9AB2 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		31516376249F099E00AF9AB2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		31516377249F099E00AF9AB2 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		3151637A249F410800AF9AB2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		3151637C249F94A100AF9AB2 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		3151637F249F996100AF9AB2 /* ProfileHeaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableCell.swift; sourceTree = "<group>"; };
+		31516380249F996100AF9AB2 /* ProfileHeaderTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderTableCell.xib; sourceTree = "<group>"; };
 		317A15B8249D25C3003F4CDA /* DemoJamStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoJamStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		317A15BB249D25C3003F4CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		317A15BD249D25C3003F4CDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,8 +133,18 @@
 			isa = PBXGroup;
 			children = (
 				31516370249E578800AF9AB2 /* LoginViewModel.swift */,
+				3151637A249F410800AF9AB2 /* ProfileViewModel.swift */,
+				3151637C249F94A100AF9AB2 /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3151637E249F98F800AF9AB2 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				3151637F249F996100AF9AB2 /* ProfileHeaderTableCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		317A15AF249D25C3003F4CDA = {
@@ -150,6 +172,7 @@
 		317A15BA249D25C3003F4CDA /* DemoJamStack */ = {
 			isa = PBXGroup;
 			children = (
+				3151637E249F98F800AF9AB2 /* CustomCell */,
 				3151636F249E576600AF9AB2 /* ViewModel */,
 				31516364249DFA9800AF9AB2 /* Model */,
 				317A15EE249DD002003F4CDA /* View */,
@@ -189,6 +212,7 @@
 				317A15BF249D25C3003F4CDA /* LoginViewController.swift */,
 				31516369249E510E00AF9AB2 /* RegistrationViewController.swift */,
 				31516372249E74E800AF9AB2 /* ProfileViewController.swift */,
+				31516376249F099E00AF9AB2 /* MenuViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,6 +224,8 @@
 				317A15C1249D25C3003F4CDA /* Main.storyboard */,
 				3151636A249E510E00AF9AB2 /* RegistrationViewController.xib */,
 				31516373249E74E800AF9AB2 /* ProfileViewController.xib */,
+				31516377249F099E00AF9AB2 /* MenuViewController.xib */,
+				31516380249F996100AF9AB2 /* ProfileHeaderTableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,9 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				317A15C8249D25C9003F4CDA /* LaunchScreen.storyboard in Resources */,
+				31516379249F099F00AF9AB2 /* MenuViewController.xib in Resources */,
 				3151636C249E510E00AF9AB2 /* RegistrationViewController.xib in Resources */,
 				317A15C5249D25C9003F4CDA /* Assets.xcassets in Resources */,
 				31516375249E74E900AF9AB2 /* ProfileViewController.xib in Resources */,
+				31516382249F996100AF9AB2 /* ProfileHeaderTableCell.xib in Resources */,
 				317A15C3249D25C3003F4CDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,10 +464,14 @@
 				317A15C0249D25C3003F4CDA /* LoginViewController.swift in Sources */,
 				31516374249E74E900AF9AB2 /* ProfileViewController.swift in Sources */,
 				317A15BC249D25C3003F4CDA /* AppDelegate.swift in Sources */,
+				31516378249F099F00AF9AB2 /* MenuViewController.swift in Sources */,
+				31516381249F996100AF9AB2 /* ProfileHeaderTableCell.swift in Sources */,
 				317A15BE249D25C3003F4CDA /* SceneDelegate.swift in Sources */,
+				3151637B249F410800AF9AB2 /* ProfileViewModel.swift in Sources */,
 				3151636B249E510E00AF9AB2 /* RegistrationViewController.swift in Sources */,
 				31516366249DFABC00AF9AB2 /* UserInfo.swift in Sources */,
 				317A15EC249DCFEA003F4CDA /* AppUtils.swift in Sources */,
+				3151637D249F94A100AF9AB2 /* MenuViewModel.swift in Sources */,
 				3151636E249E552900AF9AB2 /* Constants.swift in Sources */,
 				31516371249E578800AF9AB2 /* LoginViewModel.swift in Sources */,
 			);

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="DemoJamStack" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDismiss" destination="bMw-sD-OE5" id="W4d-KE-1Ee"/>
+                <outlet property="tableView" destination="HZS-Zn-7mh" id="tJd-i2-OH5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HZS-Zn-7mh">
+                    <rect key="frame" x="0.0" y="44" width="354" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5Sg-1w-9J5"/>
+                        <outlet property="delegate" destination="-1" id="adS-hw-cUu"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMw-sD-OE5">
+                    <rect key="frame" x="354" y="44" width="60" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="pEW-GK-dti"/>
+                    </constraints>
+                    <connections>
+                        <action selector="tapBtnDismiss:" destination="-1" eventType="touchUpInside" id="FHi-DH-WdQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="bMw-sD-OE5" secondAttribute="bottom" id="9Nd-Hv-al1"/>
+                <constraint firstItem="HZS-Zn-7mh" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="IBr-xv-PB3"/>
+                <constraint firstItem="HZS-Zn-7mh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O8m-1y-zgI"/>
+                <constraint firstItem="bMw-sD-OE5" firstAttribute="leading" secondItem="HZS-Zn-7mh" secondAttribute="trailing" id="XTH-f3-SrS"/>
+                <constraint firstItem="bMw-sD-OE5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZqQ-Ff-vgU"/>
+                <constraint firstItem="bMw-sD-OE5" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZuH-mW-24p"/>
+                <constraint firstItem="HZS-Zn-7mh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tnI-FL-YIo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="88.392857142857139"/>
+        </view>
+    </objects>
+</document>

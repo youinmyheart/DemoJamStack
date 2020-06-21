@@ -5,8 +5,7 @@ target 'DemoJamStack' do
   #use_frameworks!
 
   # Pods for DemoJamStack
-  #pod 'SideMenu'
-  pod 'SideMenuSwift'
+  pod 'SideMenu'
   pod 'Alamofire', '~> 4.0'
   pod 'NVActivityIndicatorView'
 

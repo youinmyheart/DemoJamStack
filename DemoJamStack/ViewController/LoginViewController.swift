@@ -5,7 +5,6 @@
 // 
 
 import UIKit
-import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -30,6 +29,8 @@ class LoginViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         registerKeyboardNoti()
         textFieldPassword.text = ""
+        textFieldEmail.text = "user@gmail.com"
+        textFieldPassword.text = "123456"
     }
 
     @IBAction func tapOnBtnSignUp(_ sender: Any) {
@@ -115,7 +116,7 @@ class LoginViewController: UIViewController {
             AppUtils.stopAnimating()
             AppUtils.log("auth: \(String(describing: response.auth))")
             AppUtils.log("token: \(response.token ?? "")")
-            self.goToProfileVC()
+            self.goToProfileVC(token: response.token)
         }) { (error, dataStr) in
             AppUtils.stopAnimating()
             AppUtils.showAlert(title: Constants.error, message: Constants.logInError, buttonStr: Constants.ok, viewController: self)
@@ -124,8 +125,12 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func goToProfileVC() {
+    private func goToProfileVC(token: String?) {
+        AppUtils.log("goToProfileVC")
         let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        if let token = token {
+            vc.profileVM.token = token
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     

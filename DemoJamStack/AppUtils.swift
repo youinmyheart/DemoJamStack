@@ -94,4 +94,8 @@ class AppUtils: NSObject {
     public static func isAnimating() -> Bool {
         NVActivityIndicatorPresenter.sharedInstance.isAnimating
     }
+    
+    public static func navigationBarColor() -> UIColor {
+        return UIColor(red: 0/255, green: 147/255, blue: 241/255, alpha: 1)
+    }
 }
