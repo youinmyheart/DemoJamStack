@@ -7,10 +7,16 @@
 
 import UIKit
 
-class MyRequestViewController: UIViewController {
+class MyRequestViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         AppUtils.log("viewDidLoad")
+        setUpNavigation(title: "My Request")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.hidesBackButton = true
     }
 }

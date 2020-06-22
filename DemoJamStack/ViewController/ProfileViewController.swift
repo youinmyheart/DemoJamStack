@@ -7,10 +7,15 @@
 import UIKit
 import SideMenu
 
-class ProfileViewController: UIViewController {
+protocol ProfileViewControllerDelegate: class {
+    func didTapLogout()
+}
+
+class ProfileViewController: BaseViewController {
 
     var profileVM = ProfileViewModel()
     var leftMenu: SideMenuNavigationController!
+    weak var delegate: ProfileViewControllerDelegate?
     private var menuVC: MenuViewController!
     
     @IBOutlet weak var lblName: UILabel!
@@ -31,45 +36,26 @@ class ProfileViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
-    @objc func tapMenu() {
-        AppUtils.log("tapMenu")
-        showMenu()
-    }
-    
     private func setUpView() {
-        let barBtn = UIBarButtonItem(image: UIImage(named: "menu_dot"), style: .plain, target: self, action: #selector(self.tapMenu))
-        navigationItem.rightBarButtonItem = barBtn
-        //navigationItem.title = "My Profile"
-        // nav background color
-        navigationController?.navigationBar.barTintColor = AppUtils.navigationBarColor()
-        // nav title color
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        // nav icon color
-        navigationController?.navigationBar.tintColor = .white
-        
-        // nav title left align
-        let container = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
-        let label = UILabel()
-        label.frame = CGRect(x: 20, y: 0, width: view.frame.width, height: 44)
-        label.text = "My Profile"
-        label.textColor = .white
-        container.addSubview(label)
-        navigationItem.titleView = container
+        setUpNavigation(title: "My Profile")
         
         var settings = SideMenuSettings()
         settings.menuWidth = view.frame.width
         
         menuVC = MenuViewController(nibName: "MenuViewController", bundle: nil)
         menuVC.delegate = self
+        menuVC.menuVM.selectedIndex = 3
         
         leftMenu = SideMenuNavigationController(rootViewController: menuVC, settings: settings)
         leftMenu.statusBarEndAlpha = 0
         leftMenu.presentationStyle = .menuSlideIn
         leftMenu.menuWidth = UIScreen.main.bounds.width
+        leftMenu.allowPushOfSameClassTwice = false
         
         SideMenuManager.default.leftMenuNavigationController = leftMenu
         SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
     }
     
     private func getInfo() {
@@ -105,14 +91,6 @@ class ProfileViewController: UIViewController {
         menuVC.menuVM.genderStr = profileVM.genderStr
     }
     
-    private func showMenu() {
-        present(leftMenu, animated: true, completion: nil)
-    }
-    
-    private func dismissMenu() {
-        dismiss(animated: true, completion: nil)
-    }
-    
     private func handleMenuItem(at indexPath: IndexPath) {
         if indexPath.section != 1 {
             return
@@ -122,18 +100,21 @@ class ProfileViewController: UIViewController {
         switch indexPath.row {
         case 0:
             // Home
+            goToHomeVC()
             break
         case 1:
             // Product
+            goToProductVC()
             break
         case 2:
             // My Request
+            goToMyRequestVC()
             break
         case 3:
-            // already in Profile screen
-            break
+            navigationController?.popToViewController(self, animated: false)
         case 4:
             // Logout
+            delegate?.didTapLogout()
             goBackToLoginVC()
         default:
             break
@@ -141,22 +122,26 @@ class ProfileViewController: UIViewController {
     }
     
     private func goBackToLoginVC() {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func goToHomeVC() {
-        let vc = RegistrationViewController(nibName: "HomeViewController", bundle: nil)
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popToViewController(self, animated: false)
+        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        vc.homeVM.name = profileVM.name
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     private func goToProductVC() {
-        let vc = RegistrationViewController(nibName: "ProductViewController", bundle: nil)
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popToViewController(self, animated: false)
+        let vc = ProductViewController(nibName: "ProductViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     private func goToMyRequestVC() {
-        let vc = RegistrationViewController(nibName: "MyRequestViewController", bundle: nil)
-        navigationController?.pushViewController(vc, animated: true)
+        navigationController?.popToViewController(self, animated: false)
+        let vc = MyRequestViewController(nibName: "MyRequestViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: false)
     }
 }
 

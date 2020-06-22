@@ -31,6 +31,7 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func tapBtnDismiss(_ sender: Any) {
+        AppUtils.log("tapBtnDismiss")
         delegate?.didTapButtonDismiss()
     }
     

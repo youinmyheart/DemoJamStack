@@ -98,4 +98,15 @@ class AppUtils: NSObject {
     public static func navigationBarColor() -> UIColor {
         return UIColor(red: 0/255, green: 147/255, blue: 241/255, alpha: 1)
     }
+    
+    public static func setNavigationTitle(text: String, width: CGFloat, navItem: UINavigationItem) {
+        // nav title left align
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 44))
+        let label = UILabel()
+        label.frame = CGRect(x: 20, y: 0, width: width, height: 44)
+        label.text = text
+        label.textColor = .white
+        container.addSubview(label)
+        navItem.titleView = container
+    }
 }

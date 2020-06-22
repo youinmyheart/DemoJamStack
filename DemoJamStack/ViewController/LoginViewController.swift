@@ -5,6 +5,7 @@
 // 
 
 import UIKit
+import SideMenu
 
 class LoginViewController: UIViewController {
 
@@ -131,12 +132,18 @@ class LoginViewController: UIViewController {
         if let token = token {
             vc.profileVM.token = token
         }
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
     private func goToRegistrationVC() {
         let vc = RegistrationViewController(nibName: "RegistrationViewController", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func disableMenu() {
+        self.navigationController?.navigationBar.gestureRecognizers?.removeAll()
+        self.navigationController?.view.gestureRecognizers?.removeAll()
     }
 }
 
@@ -150,5 +157,12 @@ extension LoginViewController: UITextFieldDelegate {
             logIn()
         }
         return true
+    }
+}
+
+extension LoginViewController: ProfileViewControllerDelegate {
+    func didTapLogout() {
+        AppUtils.log("didTapLogout")
+        disableMenu()
     }
 }
