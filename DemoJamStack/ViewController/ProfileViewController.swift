@@ -65,6 +65,7 @@ class ProfileViewController: UIViewController {
         leftMenu = SideMenuNavigationController(rootViewController: menuVC, settings: settings)
         leftMenu.statusBarEndAlpha = 0
         leftMenu.presentationStyle = .menuSlideIn
+        leftMenu.menuWidth = UIScreen.main.bounds.width
         
         SideMenuManager.default.leftMenuNavigationController = leftMenu
         SideMenuManager.default.addPanGestureToPresent(toView: self.navigationController!.navigationBar)
@@ -107,11 +108,65 @@ class ProfileViewController: UIViewController {
     private func showMenu() {
         present(leftMenu, animated: true, completion: nil)
     }
+    
+    private func dismissMenu() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func handleMenuItem(at indexPath: IndexPath) {
+        if indexPath.section != 1 {
+            return
+        }
+        
+        dismissMenu()
+        switch indexPath.row {
+        case 0:
+            // Home
+            break
+        case 1:
+            // Product
+            break
+        case 2:
+            // My Request
+            break
+        case 3:
+            // already in Profile screen
+            break
+        case 4:
+            // Logout
+            goBackToLoginVC()
+        default:
+            break
+        }
+    }
+    
+    private func goBackToLoginVC() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func goToHomeVC() {
+        let vc = RegistrationViewController(nibName: "HomeViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func goToProductVC() {
+        let vc = RegistrationViewController(nibName: "ProductViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func goToMyRequestVC() {
+        let vc = RegistrationViewController(nibName: "MyRequestViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension ProfileViewController: MenuViewControllerDelegate {
     func didTapButtonDismiss() {
         AppUtils.log("didTapButtonDismiss")
-        dismiss(animated: true, completion: nil)
+        dismissMenu()
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        handleMenuItem(at: indexPath)
     }
 }

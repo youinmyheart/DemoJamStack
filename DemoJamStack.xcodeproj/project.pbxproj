@@ -31,6 +31,12 @@
 		317A15DE249D25CA003F4CDA /* DemoJamStackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A15DD249D25CA003F4CDA /* DemoJamStackUITests.swift */; };
 		317A15EC249DCFEA003F4CDA /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A15EB249DCFEA003F4CDA /* AppUtils.swift */; };
 		4A6DA2A7843B5E6FF158EED6 /* libPods-DemoJamStack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 003776210D1F039FF5CAB43C /* libPods-DemoJamStack.a */; };
+		4C4C06B724A07CB3006F872D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C06B524A07CB3006F872D /* HomeViewController.swift */; };
+		4C4C06B824A07CB3006F872D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C06B624A07CB3006F872D /* HomeViewController.xib */; };
+		4C4C06BB24A07D03006F872D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C06B924A07D03006F872D /* ProductViewController.swift */; };
+		4C4C06BC24A07D03006F872D /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C06BA24A07D03006F872D /* ProductViewController.xib */; };
+		4C4C06BF24A07D7C006F872D /* MyRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4C06BD24A07D7C006F872D /* MyRequestViewController.swift */; };
+		4C4C06C024A07D7C006F872D /* MyRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C06BE24A07D7C006F872D /* MyRequestViewController.xib */; };
 		5A3CF306D3E2AC151DB7B870 /* libPods-DemoJamStack-DemoJamStackUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF7B2E2559872990F3F1EE4 /* libPods-DemoJamStack-DemoJamStackUITests.a */; };
 		8438DDB364E42F581D5655EE /* libPods-DemoJamStackTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38EA3AAE2845A8B5127E866E /* libPods-DemoJamStackTests.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +92,12 @@
 		317A15EB249DCFEA003F4CDA /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		38EA3AAE2845A8B5127E866E /* libPods-DemoJamStackTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoJamStackTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F1DC53B7624B1E98BBF84C /* Pods-DemoJamStack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoJamStack.release.xcconfig"; path = "Target Support Files/Pods-DemoJamStack/Pods-DemoJamStack.release.xcconfig"; sourceTree = "<group>"; };
+		4C4C06B524A07CB3006F872D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4C4C06B624A07CB3006F872D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		4C4C06B924A07D03006F872D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		4C4C06BA24A07D03006F872D /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		4C4C06BD24A07D7C006F872D /* MyRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestViewController.swift; sourceTree = "<group>"; };
+		4C4C06BE24A07D7C006F872D /* MyRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRequestViewController.xib; sourceTree = "<group>"; };
 		88D8FD437372F14C8F1F780C /* Pods-DemoJamStackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoJamStackTests.debug.xcconfig"; path = "Target Support Files/Pods-DemoJamStackTests/Pods-DemoJamStackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A555CB7E143AE2FF477D3703 /* Pods-DemoJamStack-DemoJamStackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoJamStack-DemoJamStackUITests.release.xcconfig"; path = "Target Support Files/Pods-DemoJamStack-DemoJamStackUITests/Pods-DemoJamStack-DemoJamStackUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C329815D34D3ADD6B78B6E13 /* Pods-DemoJamStack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoJamStack.debug.xcconfig"; path = "Target Support Files/Pods-DemoJamStack/Pods-DemoJamStack.debug.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +225,9 @@
 				31516369249E510E00AF9AB2 /* RegistrationViewController.swift */,
 				31516372249E74E800AF9AB2 /* ProfileViewController.swift */,
 				31516376249F099E00AF9AB2 /* MenuViewController.swift */,
+				4C4C06B524A07CB3006F872D /* HomeViewController.swift */,
+				4C4C06B924A07D03006F872D /* ProductViewController.swift */,
+				4C4C06BD24A07D7C006F872D /* MyRequestViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -226,6 +241,9 @@
 				31516373249E74E800AF9AB2 /* ProfileViewController.xib */,
 				31516377249F099E00AF9AB2 /* MenuViewController.xib */,
 				31516380249F996100AF9AB2 /* ProfileHeaderTableCell.xib */,
+				4C4C06B624A07CB3006F872D /* HomeViewController.xib */,
+				4C4C06BA24A07D03006F872D /* ProductViewController.xib */,
+				4C4C06BE24A07D7C006F872D /* MyRequestViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -361,12 +379,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				317A15C8249D25C9003F4CDA /* LaunchScreen.storyboard in Resources */,
+				4C4C06BC24A07D03006F872D /* ProductViewController.xib in Resources */,
 				31516379249F099F00AF9AB2 /* MenuViewController.xib in Resources */,
 				3151636C249E510E00AF9AB2 /* RegistrationViewController.xib in Resources */,
 				317A15C5249D25C9003F4CDA /* Assets.xcassets in Resources */,
 				31516375249E74E900AF9AB2 /* ProfileViewController.xib in Resources */,
 				31516382249F996100AF9AB2 /* ProfileHeaderTableCell.xib in Resources */,
 				317A15C3249D25C3003F4CDA /* Main.storyboard in Resources */,
+				4C4C06C024A07D7C006F872D /* MyRequestViewController.xib in Resources */,
+				4C4C06B824A07CB3006F872D /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +486,9 @@
 				31516374249E74E900AF9AB2 /* ProfileViewController.swift in Sources */,
 				317A15BC249D25C3003F4CDA /* AppDelegate.swift in Sources */,
 				31516378249F099F00AF9AB2 /* MenuViewController.swift in Sources */,
+				4C4C06BF24A07D7C006F872D /* MyRequestViewController.swift in Sources */,
+				4C4C06B724A07CB3006F872D /* HomeViewController.swift in Sources */,
+				4C4C06BB24A07D03006F872D /* ProductViewController.swift in Sources */,
 				31516381249F996100AF9AB2 /* ProfileHeaderTableCell.swift in Sources */,
 				317A15BE249D25C3003F4CDA /* SceneDelegate.swift in Sources */,
 				3151637B249F410800AF9AB2 /* ProfileViewModel.swift in Sources */,

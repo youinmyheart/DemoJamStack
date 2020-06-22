@@ -8,6 +8,7 @@ import UIKit
 
 protocol MenuViewControllerDelegate: class {
     func didTapButtonDismiss()
+    func didSelectItem(at indexPath: IndexPath)
 }
 
 class MenuViewController: UIViewController {
@@ -37,6 +38,10 @@ class MenuViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ProfileHeaderTableCell", bundle: nil), forCellReuseIdentifier: ProfileHeaderTableCell.cellId)
     }
+    
+    private func handleColorForSelectedItem(_ selectedIndex: Int) -> UIColor {
+        return selectedIndex == menuVM.selectedIndex ? .blue : .black
+    }
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,6 +68,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
                 cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
             }
             cell?.textLabel?.text = menuVM.titleForRow(indexPath.row)
+            cell?.textLabel?.textColor = handleColorForSelectedItem(indexPath.row)
             return cell!
         default:
             return UITableViewCell()
@@ -89,5 +95,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 1 {
+            menuVM.selectedIndex = indexPath.row
+            tableView.reloadData()
+        }
+        delegate?.didSelectItem(at: indexPath)
     }
 }

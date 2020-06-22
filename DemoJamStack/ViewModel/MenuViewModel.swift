@@ -15,6 +15,8 @@ struct MenuViewModel {
         return 2
     }
     
+    var selectedIndex: Int = -1
+    
     func numOfRows(section: Int) -> Int {
         switch section {
         case 0:
