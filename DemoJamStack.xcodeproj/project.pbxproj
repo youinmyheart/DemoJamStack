@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3123492A24A13FB300E13235 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3123492924A13FB300E13235 /* RegistrationViewModel.swift */; };
 		31516366249DFABC00AF9AB2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31516365249DFABC00AF9AB2 /* UserInfo.swift */; };
 		31516368249E119000AF9AB2 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31516367249E119000AF9AB2 /* ApiHelper.swift */; };
 		3151636B249E510E00AF9AB2 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31516369249E510E00AF9AB2 /* RegistrationViewController.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		003776210D1F039FF5CAB43C /* libPods-DemoJamStack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoJamStack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E2FC617C9901EF31094DB63 /* Pods-DemoJamStack-DemoJamStackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoJamStack-DemoJamStackUITests.debug.xcconfig"; path = "Target Support Files/Pods-DemoJamStack-DemoJamStackUITests/Pods-DemoJamStack-DemoJamStackUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3123492924A13FB300E13235 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		31516365249DFABC00AF9AB2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		31516367249E119000AF9AB2 /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		31516369249E510E00AF9AB2 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				3151637A249F410800AF9AB2 /* ProfileViewModel.swift */,
 				3151637C249F94A100AF9AB2 /* MenuViewModel.swift */,
 				4C4C06C324A0D759006F872D /* HomeViewModel.swift */,
+				3123492924A13FB300E13235 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				317A15C0249D25C3003F4CDA /* LoginViewController.swift in Sources */,
 				31516374249E74E900AF9AB2 /* ProfileViewController.swift in Sources */,
 				317A15BC249D25C3003F4CDA /* AppDelegate.swift in Sources */,
+				3123492A24A13FB300E13235 /* RegistrationViewModel.swift in Sources */,
 				31516378249F099F00AF9AB2 /* MenuViewController.swift in Sources */,
 				4C4C06C224A0D3DF006F872D /* BaseViewController.swift in Sources */,
 				4C4C06BF24A07D7C006F872D /* MyRequestViewController.swift in Sources */,

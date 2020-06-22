@@ -13,5 +13,6 @@ struct Constants {
     static let enterPassword = "Enter your password"
     static let emailInvalid = "Email is not valid"
     static let passwordInvalid = "Password must has at least 6 characters"
+    static let nameEmpty = "Name must not be empty"
     static let logInError = "There's an error for logging in this account"
 }

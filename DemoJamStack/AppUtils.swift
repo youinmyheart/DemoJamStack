@@ -82,6 +82,15 @@ class AppUtils: NSObject {
         viewController.present(alert, animated: true)
     }
     
+    public class func showAlert(title: String?, message: String?, buttonStr1: String?, buttonStr2: String?, viewController: UIViewController, handler1: ((UIAlertAction) -> Void)? = nil, handler2: ((UIAlertAction) -> Void)? = nil) {
+        let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
+        let okBtn = UIAlertAction.init(title: buttonStr1, style: .default, handler: handler1)
+        let cancelBtn = UIAlertAction.init(title: buttonStr2, style: .default, handler: handler2)
+        alert.addAction(okBtn)
+        alert.addAction(cancelBtn)
+        viewController.present(alert, animated: true)
+    }
+    
     public static func startAnimating() {
         let activityData = ActivityData()
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)

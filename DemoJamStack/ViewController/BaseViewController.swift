@@ -24,6 +24,10 @@ class BaseViewController: UIViewController {
         // nav icon color
         navigationController?.navigationBar.tintColor = .white
         
+        // restore nav border
+        navigationController?.navigationBar.setBackgroundImage(nil, for:.default)
+        navigationController?.navigationBar.shadowImage = nil
+        
         AppUtils.setNavigationTitle(text: title, width: view.frame.width, navItem: navigationItem)
     }
     
